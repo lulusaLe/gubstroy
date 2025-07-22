@@ -1,7 +1,7 @@
 {
   "name": "Губкин Строй",
   "short_name": "Строй",
-  "start_url": "/",
+  "start_url": "/gubstroy/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
