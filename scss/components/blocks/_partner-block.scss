@@ -1,0 +1,39 @@
+.partner-block {
+	@extend %rounded;
+	@extend %bordered;
+
+	display: grid;
+
+	background: get-color(primary, medium-plus);
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	width: 160px * 4;
+	height: 64px;
+
+	overflow: hidden;
+
+	@include max-screen(950px) {
+		grid-template-columns: 1fr 1fr;
+		width: 256px;
+		height: 64px * 2;
+
+	}
+
+	.partner {
+		cursor: pointer;
+		@extend %centrified-flex;
+		@include transition;
+
+		&:hover {
+			background: get-color(primary, light);
+		}
+		&:active {
+			background: $second-color;
+			color: get-color(primary, light);
+		}
+		&.active {
+			background: $second-color;
+			color: get-color(primary, light);
+		}
+	}
+}

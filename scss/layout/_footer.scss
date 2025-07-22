@@ -1,0 +1,15 @@
+.footer {
+	@extend %centrified-flex;
+	@extend %rounded;
+	@extend %bordered;
+
+	width: get-size(width, $footer-size, medium);
+	height: get-size(height, $footer-size, medium);
+
+	justify-content: flex-end;
+	margin-top: get-full-margin(big);
+	padding: 0 $content-padding;
+
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}

@@ -1,0 +1,33 @@
+.partners {
+	@extend %flex;
+
+	.partner-div {
+		@extend %flex;
+		@include transition;
+		margin-top: get-margin(medium);
+		align-items: center;
+
+		&.active {
+			transform: scaleY(1);
+			height: auto;
+		}
+		&:not(.active) {
+			transform: scaleY(0);
+			height: 0px;
+			margin: 0;
+			opacity: 0;
+		}
+
+		.block {
+			min-width: 100px;
+			max-width: 240px;
+			margin: 0 get-margin(medium) 0 0;
+		}
+	}
+
+	@include max-screen(1150px) {
+		.partner-block {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,69 @@
+.object {
+
+	.half-block {
+		align-self: flex-start;
+		margin-bottom: get-full-margin(big);
+
+		@include max-screen(1150px) {
+			margin-top: get-full-margin(medium);
+		}
+	}
+
+	.markers {
+		@extend %flex;
+		@extend %bordered;
+		@extend %rounded;
+
+		justify-content: center;
+
+		height: 64px;
+		width: max-content;
+		margin-top: get-margin(medium);
+		background: get-color(primary, medium-plus);
+		padding: get-margin(small) get-full-margin(tiny);
+
+		@include max-screen(600px) {
+			width: 100%;
+
+			.marker {
+				flex-grow: 1;
+			}
+		}
+
+		.marker {
+			@extend %rounded;
+			@extend %centrified-flex;
+
+			position: relative;
+			width: 56px;
+			margin: 0 get-margin(tiny);
+			padding: get-margin(tiny);
+
+			&.electricity {
+				background: get-marker-color(electricity);
+				border: 1px solid lighten(get-marker-color(electricity), 10%); 
+			}
+			&.house {
+				background: get-marker-color(house);
+				border: 1px solid lighten(get-marker-color(house), 10%); 
+			}
+			&.ecologic {
+				background: get-marker-color(ecologic);
+				border: 1px solid lighten(get-marker-color(ecologic), 10%); 
+			}
+
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+	}
+
+	.description {
+		margin-top: get-full-margin(medium);
+
+		.paragraph {
+			margin-top: get-full-margin(tiny);
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.link {
+	.menu-arrow {
+		width: get-size(width, $arrow-size, medium);
+		height: get-size(height, $arrow-size, medium);
+
+		margin-right: 5px;
+
+		@include transition();
+	}
+
+	&:hover .menu-arrow {
+		transform: rotate(180deg);
+	}
+}

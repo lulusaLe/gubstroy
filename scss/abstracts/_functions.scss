@@ -1,0 +1,38 @@
+@use "sass:map";
+
+//MARGINS
+
+@function get-margin($name) {
+	@return map.get($margins, $name) / 2;
+}
+@function get-full-margin($name) {
+	@return map.get($margins, $name);
+}
+
+
+//HEIGHT-WIDTH
+
+@function get-size($size-name, $size-map, $type: 'medium') {
+	@return map.get($size-map, $type, $size-name);
+}
+
+//FONTS
+
+@function get-font($font-name : primary) {
+	@return map.get($fonts, $font-name);
+}
+@function get-font-style($font-name : primary) {
+	@return map.get($font-styles, $font-name);
+}
+@function get-font-size($font-size: medium) {
+	@return map.get($font-sizes, $font-size);
+}
+
+//COLORS
+
+@function get-color($color-name : primary, $lightness: $default-lightness) {
+	@return map.get($colors, $color-name, $lightness);
+}
+@function get-marker-color($color-name) {
+	@return map.get($marker-colors, $color-name);
+}

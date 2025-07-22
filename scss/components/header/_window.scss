@@ -1,0 +1,55 @@
+.link {
+	.window {
+		@extend %bordered;
+		@extend %rounded;
+		@include transition;
+
+		position: absolute;
+		top: get-font-size('medium-plus');
+		padding: get-full-margin('tiny');
+
+		background: get-color();
+
+		pointer-events: none;
+		opacity: 0;
+		z-index: 2;
+
+		&.big {
+			width: get-size(width, $window-size, big);
+			min-height: get-size(height, $window-size, big);
+		}
+
+		&.small {
+			width: get-size(width, $window-size, small);
+			min-height: get-size(height, $window-size, small);
+		}
+	
+		&:hover {
+			pointer-events: all;
+			opacity: 100%;
+		}
+		& * {
+			font-size: get-font-size('small');
+		}
+		& b {
+			font-weight: 500;
+		}
+	}
+
+	&:hover {
+		z-index: 2;
+
+		.window {
+			pointer-events: all;
+			opacity: 100%;
+		}
+	}
+}
+.header.desktop-only .window {
+	right: 0;
+	left: auto;
+}
+.header.mobile-only .window {
+	left: 0;
+	right: auto;
+}

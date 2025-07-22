@@ -1,0 +1,8 @@
+.button-block {
+	@extend %flex;
+	p {
+		padding: get-margin(medium) get-margin(small) !important;
+		color: get-color(primary, light);
+		z-index: 2;
+	}
+}

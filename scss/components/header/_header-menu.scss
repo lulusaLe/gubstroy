@@ -1,0 +1,30 @@
+.header {
+	.menu {
+		display: flex;
+
+		@include max-screen(950px) {
+			flex-direction: column;
+		}
+	}
+
+	.menu li {
+		list-style-type: none !important;
+		
+		@include min-screen(1050px) {
+			margin-right: get-margin('small');
+			margin-left: get-margin('small');
+		}
+		@include max-screen(1049px) {
+			margin-right: get-margin('tiny');
+			margin-left: get-margin('tiny');
+		}
+		@include max-screen(949px) {
+			margin-bottom: get-full-margin('smaller');
+			margin-left: get-full-margin('medium');
+
+			&:last-child {
+				margin-bottom: get-full-margin('medium');
+			}
+		}
+	}
+}

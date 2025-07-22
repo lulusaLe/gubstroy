@@ -1,0 +1,84 @@
+.gallery-block {
+	@extend %centrified-flex;
+
+	.arrows {
+		@extend %flex-between;
+		width: 100%;
+		height: auto;
+		padding: 0 get-full-margin(small);
+		align-items: center;
+		z-index: 2;
+
+		h4 {
+			@include transition;
+			color: white;
+		}
+
+		.gallery-arrow {
+			width: 24px;
+			height: 12px;
+
+			@include transition;
+			cursor: pointer;
+
+			@include max-screen(950px) {
+				width: 16px;
+				height: 8px;
+			}
+
+			&.left {
+				transform: rotate(-90deg);
+				&:hover {
+					transform: rotate(-90deg) scale(1.2);
+				}
+				&:active {
+					transform: rotate(-90deg) scale(0.9);
+				}
+			}
+			&.right {
+				transform: rotate(90deg); 
+				&:hover {
+					transform: rotate(90deg) scale(1.2);
+				}
+				&:active {
+					transform: rotate(90deg) scale(0.9);
+				}
+			}
+		}
+	}
+
+	.bg {
+		@include transition($transition-time * 2);
+	}
+
+	.points {
+		@extend %centrified-flex;
+		position: absolute;
+		width: 100%;
+		height: 56px;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+
+		.point {
+			@extend %rounded;
+			width: 4px;
+			height: 4px;
+			margin: get-margin(tiny);
+			background: transparentize(get-color(primary, light), 0.3);
+
+			&.enabled {
+				width: 8px;
+				height: 8px;
+				background: get-color(primary, light);
+			}
+			&.near {
+				width: 6px;
+				height: 6px;
+				background: transparentize(get-color(primary, light), 0.3);
+			}
+		}
+
+	}
+}

@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+h1, h2 {
+	line-height: 72px;
+
+	font-size: get-font-size(large);
+
+	margin-bottom: get-full-margin(medium);
+
+	@include max-screen(550px) {
+		font-size: get-font-size(big);
+		line-height: 48px;
+	}
+}
+
+h3 {
+	font-size: get-font-size(medium-plus);
+}
+
+h4 {
+	font-size: get-font-size(medium-plus);
+
+	@include max-screen(950px) {
+		font-size: get-font-size(medium);
+	}
+}

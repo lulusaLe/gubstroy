@@ -1,0 +1,39 @@
+//FONTS
+
+$fonts : (
+	'primary': 'Inter', sans-serif
+	'secondary': 'Inter' serif
+);
+
+$font-styles : (
+	'primary': sans-serif	
+);
+
+//COLORS
+
+$colors : (
+	'primary' : (
+		'light' : #ffffff,
+		'medium-plus' : #f2f4f7,
+		'medium' : #cccccc,
+		'medium-minus' : #4D4D4D,
+		'dark' : #222222,
+		'darkest': #000000
+	)
+);
+
+$marker-colors: (
+	'house': #1A75FF,
+	'electricity': #FF4114,
+	'ecologic': #67AE03 
+);
+
+$second-color: #FF2366;
+$default-lightness: light;
+
+$border-color: #cccccc;
+$border-size: 1px;
+
+//BORDERS
+
+$radius: 8px;

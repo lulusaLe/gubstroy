@@ -1,0 +1,119 @@
+$margins: (
+	'big': 64px,
+	'medium': 32px,
+	'small': 24px,
+	'tiny': 16px,
+	'smaller': 12px,
+	'smallest': 8px
+);
+
+$font-sizes: (
+	'large': 64px,
+	'big': 32px,
+	'medium-plus': 22px,
+	'medium': 18px,
+	'small': 16px,
+	'tiny': 12px
+);
+$headline-line-height: 72px;
+
+$animation-time: 0.5s;
+$transition-time: 0.2s;
+
+//HEADER
+$header-size: (
+	'big': (
+		'width': 100%,
+		'height': 142px
+	),
+	'medium': (
+		'width': 100%,
+		'height': 64px
+	)
+);
+
+$window-size: (
+	'big': (
+		'width': 256px,
+		'height': 240px
+	),
+	'small': (
+		'width': 256px,
+		'height': 90px
+	)
+
+);
+
+$window-map-size: (
+	'medium': (
+		'width': 224px,
+		'height': 124px
+	)
+);
+
+//LOGO
+$logo-size: (
+	'medium': (
+		'width': 136px,
+		'height': 118px
+	),
+	'small-plus': (
+		'width': 82px,
+		'height': 70px
+	),
+	'small': (
+		'width': 46px,
+		'height': 40px
+	)
+);
+
+$arrow-size: (
+	'medium': (
+		'width': 14px,
+		'height': 9px
+	)
+);
+
+//MODAL
+
+$modal-size: (
+	'medium': (
+		'width': 288px,
+		'height': 423px
+	)
+);
+
+//CONTENT 
+
+$content-padding: 80px;
+
+$block-size: (
+	'big': (
+		'width' : 544px,
+		'height' : 448px
+	),
+	'small': (
+		'width' : 256px,
+		'height' : 208px
+	)
+);
+
+$button-size: (
+	'medium': (
+		'width' : 183px,
+		'height' : 64px
+	)
+);
+
+//FOOTER
+
+$footer-size: (
+	'big': (
+		'width': 100%,
+		'height': 142px
+	),
+	'medium': (
+		'width': 100%,
+		'height': 64px
+	)
+);

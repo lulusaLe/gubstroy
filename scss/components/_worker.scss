@@ -1,0 +1,5 @@
+.worker {
+	@include max-screen(1150px) {
+		margin: get-margin(medium) 0;
+	}
+}

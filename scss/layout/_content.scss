@@ -1,0 +1,14 @@
+.content {
+	position: relative;
+
+	width: 100%;
+	max-width: 1280px;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding: get-size(height, $header-size, big) $content-padding 0;
+
+	@include max-screen(950px) {
+		padding: get-size(height, $header-size, big) get-full-margin(medium) 0;
+	}
+}

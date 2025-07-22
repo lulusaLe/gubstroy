@@ -1,0 +1,9 @@
+@mixin transition($time : $transition-time) {
+	transition: all $time ease-in-out;
+}
+
+@mixin mobile-version() {
+	@include max-screen(900px) {
+		@content;
+	}
+}

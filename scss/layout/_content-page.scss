@@ -1,0 +1,18 @@
+.content-page {
+	position: relative;
+	@extend %flex;
+	align-items: flex-end;
+	width: 100%;
+	padding-top: get-full-margin(big);
+	flex-basis: fill;
+
+	flex-wrap: wrap;
+
+	@include max-screen(950px) {
+		padding-top: get-full-margin(small) !important;
+	}
+	@include max-screen(1150px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}

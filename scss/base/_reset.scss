@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	font-family: get-font(), get-font-style();
+	font-size: get-font-size(medium);
+	color: get-color(primary, dark);
+
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+}
+
+ul li {
+	list-style: inside;
+}
+
+p {
+	color: get-color(primary, medium-minus);
+}

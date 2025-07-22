@@ -1,0 +1,55 @@
+.service {
+	@extend %flex;
+
+	flex-wrap: wrap;
+	align-items: center;
+
+	margin-bottom: get-full-margin(medium);
+
+	.headline {
+		@extend %flex;
+
+		h3 {
+			margin-left: get-margin(medium);
+		}
+
+		.services-arrow {
+			@include transition;
+			margin-top: auto;
+			margin-bottom: auto;
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+
+	.description {
+		margin-top: get-full-margin(medium);
+		@include transition;
+
+		p {
+			margin-top: get-full-margin(tiny);
+		}
+	}
+
+	&.active {
+		.headline .services-arrow {
+			transform: rotate(180deg);
+		}
+		.description {
+			opacity: 1;
+		}
+	}
+	&:not(.active) {
+		.headline .services-arrow {
+			transform: rotate(0deg);
+		}
+		.description {
+			pointer-events: none;
+			opacity: 0;
+			transform: rotateX(-90deg);
+			height: 0;
+		}
+	}
+
+}

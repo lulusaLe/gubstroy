@@ -1,0 +1,31 @@
+.centrified-flex {
+	@extend %centrified-flex;
+}
+
+.flex-between {
+	@extend %flex-between;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.w100 {
+	@include max-screen(1150px) {
+		width: 80%;
+	}
+	@include max-screen(950px) {
+		width: 100%;
+	}
+	width: 100%;
+}
+
+.selectable {
+	@include transition;
+	@extend %selectable;
+}
+
+.selectable-big {
+	@include transition;
+	@extend %selectable-big;	
+}

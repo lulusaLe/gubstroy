@@ -1,0 +1,76 @@
+.header {
+	@extend %rounded;
+	@extend %bordered;
+
+	@include transition;
+
+	display: flex;
+	width: get-size(width, $header-size, 'medium');
+	height: get-size(height, $header-size, 'medium');
+	position: fixed;
+
+	background: linear-gradient(to bottom, get-color(primary), transparentize(get-color(primary), 0.16));
+
+	align-items: center;
+
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+	z-index: 5;
+
+	@include min-screen(950px) {
+		justify-content: center;
+	}
+	@include max-screen(950px) {
+		justify-content: space-between;
+	}
+
+	.logo {
+		@include transition;
+		display: block;
+
+		width: get-size(width, $logo-size, 'small');
+		height: get-size(height, $logo-size, 'small');
+
+		@include min-screen(1150px) {
+			margin: 0 89px;
+		}
+		@include max-screen(1149px) {
+			margin: 0 get-margin(medium);
+		}
+	}
+
+	&.mobile-only {
+		display: block;
+		min-height: get-size(height, $header-size, medium);
+		overflow: hidden;
+
+		.top {
+			display: flex;
+			padding: get-full-margin('smaller')
+					get-full-margin('medium')
+					get-full-margin('medium');
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&.big {
+		width: get-size(width, $header-size, 'big');
+		height: get-size(height, $header-size, 'big');
+
+		.logo {
+			width: get-size(width, $logo-size, 'medium');
+			height: get-size(height, $logo-size, 'medium');
+
+			@include min-screen(1150px) {
+				margin: 0 43px;
+			}
+			@include screen(950px, 1150px) {
+				width: get-size(width, $logo-size, small-plus);
+				height: get-size(height, $logo-size, small-plus);
+				margin: 0;// get-margin(small);
+			}
+		}
+	}
+}

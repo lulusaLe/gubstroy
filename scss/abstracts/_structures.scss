@@ -1,0 +1,74 @@
+%rounded {
+	border-radius: $radius;
+}
+
+%flex {
+	display: flex;
+}
+
+%centrified-flex {
+	@extend %flex;
+
+	justify-content: center;
+	align-items: center;
+}
+%flex-between {
+	@extend %flex;
+
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+%selectable {
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.02);
+	}
+	&:active {
+		transform: scale(0.98);
+	}
+}
+
+%selectable-big {
+	cursor: pointer;
+	
+	&:hover {
+		transform: scale(1.5);
+	}
+	&:active {
+		transform: scale(0.9);
+	}
+}
+
+%bordered {
+	border: $border-size solid $border-color
+}
+
+%button {
+	@extend %centrified-flex;
+	@extend %bordered;
+	@extend %rounded;
+	@extend %selectable;
+
+	@include transition;
+
+	width: get-size(width, $button-size, medium);
+	height: get-size(height, $button-size, medium);
+
+	cursor: pointer;
+
+	@include max-screen(900px) {
+		width: 100%;
+	}
+
+	&.second-color {
+		background: $second-color;
+		border: none;
+		color: get-color(primary, light);
+	}
+
+	&.w-100 {
+		width: 100%;
+	}
+}

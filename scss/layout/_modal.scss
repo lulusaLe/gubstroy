@@ -1,0 +1,71 @@
+.modal-background {
+	@extend %centrified-flex;
+	@include transition;
+	width: 100%;
+	height: 100%;
+	background: transparentize(black, 0.6);
+	position: fixed;
+
+	opacity: 0;
+	pointer-events: none;
+	z-index: 5;
+
+	.modal {
+		@extend %rounded;
+		@extend %flex;
+		padding: get-margin(medium);
+		flex-direction: column;
+
+		justify-content: center;
+		width: 100%;
+		max-width: get-size(width, $modal-size, medium);
+		//min-height: get-size(height, $modal-size, medium);
+		background: white;
+
+		* {
+			margin-bottom: get-margin(smaller);
+			margin-top: get-margin(smaller);
+		}
+
+		*:first-child {
+			margin-top: 0;
+		}
+		*:last-child {
+			margin-bottom: 0;
+		}
+
+		.head {
+			width: 100%;
+			@extend %flex-between;
+
+			.close {
+				height: 16px;
+				width: 16px;
+
+				@extend %selectable;
+			}
+		}
+
+		input {
+			@extend %bordered;
+			@extend %rounded;
+			@include transition;
+
+
+			padding: get-margin(medium);
+			width: 100%;
+			height: 48px;
+		
+			&[type=text]:focus, &[type=text]:active {
+				outline: 2px solid $second-color;
+			}
+			&[type=submit] {
+				@extend %selectable;
+
+				background: $second-color;
+				padding: 0;
+				color: get-color(primary);
+			}
+		}
+	}
+}

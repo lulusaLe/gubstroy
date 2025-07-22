@@ -1,0 +1,52 @@
+.block {
+	@extend %rounded;
+	position: relative;
+
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+
+	margin: 0;// get-margin(medium);
+
+	.bg {
+		position: absolute;
+
+		left: 50%;	
+		top: 50%;
+
+		min-height: 100%;
+		width: 100%;
+
+		transform: translate(-50%, -50%);
+	}
+
+	@include max-screen(1150px) {
+		margin-bottom: get-margin(small);
+		margin-top: get-margin(small);
+	}
+
+	&:only-child {
+		margin: 0;
+	}
+
+
+	&.square {
+		aspect-ratio: 1;
+	}
+	&.big {
+		aspect-ratio: get-size(width, $block-size, big) / get-size(height, $block-size, big);
+	}
+
+	&.wide {
+		aspect-ratio: get-size(width, $block-size, big) / get-size(height, $block-size, small);
+	}
+
+	&.small {
+		aspect-ratio: get-size(width, $block-size, small) / get-size(height, $block-size, small);
+
+		@include max-screen(950px) {
+			//aspect-ratio: get-size(width, $block-size, big) / get-size(height, $block-size, small);
+		}
+	}
+}

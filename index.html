@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="js/wow/css/libs/animate.css">
+	<script src="js/wow/dist/WOW.js"></script>
+    <script>
+        new WOW().init();
+   	</script>
+
+	<script src="js/header.js"></script>
+	<script src="js/partners.js"></script>
+	<script src="js/gallery.js"></script>
+	<script src="js/modal.js"></script>
+
+	<link rel="manifest" href="manifest.json" />
+	<meta name="theme-color" content="#FFFFFF" />
+
+	<link rel="stylesheet" href="css/main.css">
+	<title>Главная - Губкин-строй</title>
+</head>
+<body>
+	<div class="header desktop-only">
+	<ul class="menu">
+		<li><a href="index.html" class="link">Главная</a></li>
+		<li><a href="services.html" class="link">Услуги</a></li>
+		<li><a href="workers.html" class="link">Сотрудники</a></li>
+		<li><a href="objects.html" class="link">Объекты</a></li>
+	</ul>
+	<img src="src/logo-big.png" class="logo " alt="">
+	<ul class="menu">
+		<li><a href="investors.html" class="link">Инвесторам</a></li>
+		<li><a href="news.html" class="link">Новости</a></li>
+		<li><a class="link windowed">
+			<img src="src/arrow.png" class="menu-arrow" alt="">
+			Адрес
+			<div class="window big">
+				<b>Адрес</b>
+				<p>ул. КСКа, д. 3, офис 4.18 Москва, Россия, 420111</p>
+				<div class="map">
+					<img src="src/map.png" alt="">
+				</div>
+			</div>
+		</a></li>
+		<li><a class="link windowed">
+			<img src="src/arrow.png" class="menu-arrow" alt="">
+			Контакты
+			<div class="window small">
+				<b>Контакты</b>
+				<p>+7 924 828 70 21</p>
+				<p>gubkinstroy@mail.ru</p>
+			</div>
+		</a></li>
+	</ul>
+</div>
+	<div class="header mobile-only">
+	<div class="top">
+		<img src="src/logo-big.png" class="logo" alt="">
+		<a class="link" onclick="OnMenuButton()" id="menu">Меню</a>
+	</div>
+	<ul class="menu">
+		<li><a href="index.html" class="link">О компании</a></li>
+		<li><a href="services.html" class="link">Услуги</a></li>
+		<li><a href="workers.html" class="link">Сотрудники</a></li>
+		<li><a href="objects.html" class="link">Объекты</a></li>
+		<li><a href="investors.html" class="link">Инвесторам</a></li>
+		<li><a href="news.html" class="link">Новости</a></li>
+		<li><a class="link windowed">
+			<img src="src/arrow.png" class="menu-arrow" alt="">
+			Адрес
+			<div class="window big">
+				<b>Адрес</b>
+				<p>ул. КСКа, д. 3, офис 4.18 Москва, Россия, 420111</p>
+				<div class="map">
+					<img src="src/map.png" alt="">
+				</div>
+			</div>
+		</a></li>
+		<li><a class="link windowed">
+			<img src="src/arrow.png" class="menu-arrow" alt="">
+			Контакты
+			<div class="window small">
+				<b>Контакты</b>
+				<p>+7 924 828 70 21</p>
+				<p>gubkinstroy@mail.ru</p>
+			</div>
+		</a></li>
+	</ul>
+</div>
+
+	<div class="modal-background" id="modal-default">
+		<div class="modal">
+			<div class="head">
+				<b>Оставьте заявку сейчас!</b>
+				<img class="close" onclick="CloseModal(this)" src="src/cross.png" alt="">
+			</div>
+			<p>Мы круто строим... правда.</p>
+			<img src="src/images/1.png" alt="">
+			<form action="">
+				<input type="text" placeholder="Ваше имя">
+				<input type="text" placeholder="Номер телефона">
+				<input type="submit" placeholder="Оставить заявку">
+			</form>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="content-page wow fadeInUp main-page">
+			<div class="half-block">
+				<h1>Губкин Строй</h1>
+				<p>— команда профессионалов, объединившихся для реализации ваших проектов.</p>
+				<div class="centrified-flex images">
+					<div class="block small selectable button-block" >
+						<p class="">Крупные объекты</p>
+						<img class="bg" src="src/images/1.png" alt="">
+					</div>
+					<div class="block small selectable button-block">
+						<p class="">Мелкие объекты</p>
+						<img class="bg" src="src/images/2.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="half-block">
+				<div class="block big gallery-block">
+					<img class="bg" src="src/images/3.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="content-page wow fadeInUp technologies">
+			<div class="w100"><h1>Технологии компании</h1></div>
+			<div class="w100 centrified-flex wrap">
+				<div class="half-block selectable">
+					<div class="block wide"><img class="bg" src="src/images/4.png" alt=""></div>
+					<ul>
+						<li class="description">Мы эксплуатируем технику только известных и надежных производителей. Разнообразный и многофункциональный парк строительной техники тому подтверждение!</li>
+					</ul>
+				</div>
+				<div class="half-block selectable">
+					<div class="block wide"><img class="bg" src="src/images/5.png" alt=""></div>
+					<ul>
+						<li class="description">Также мы сводим к нулю затраты на организацию работ «Нулевого цикла» и привязку к муниципальным коммуникациям благодаря собственным источникам электроснабжения.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content-page wow fadeInUp quality">
+			<div class="w100"><h1>Современность и качество</h1></div>
+			<div class="w100 centrified-flex wrap">
+				<div class="half-block selectable">
+					<div class="block wide"><img class="bg" src="src/images/6.png" alt=""></div>
+					<ul>
+						<li class="description">Следуя современным мировым тенденциям, мы используем исключительно экологичные стройматериалы!</li>
+					</ul>
+				</div>
+				<div class="half-block selectable">
+					<div class="block wide"><img class="bg" src="src/images/7.png" alt=""></div>
+					<ul>
+						<li class="description">А партнерство с проверенными поставщиками и официальными дилерами позволяет добиться нам максимального качества</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content-page wow fadeInUp">
+			<div class="button w100 second-color" onclick="OpenModal('modal-default')">
+				Позвонить нам
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Сабецкая Елена</p>
+	</div>
+</body>
+</html>

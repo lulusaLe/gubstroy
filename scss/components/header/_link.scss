@@ -1,0 +1,33 @@
+.link {
+	@include transition();
+
+	position: relative;
+	
+	display: flex;
+	align-items: center;
+
+	text-decoration: none;
+	cursor: pointer;
+	
+	color: get-color(primary, dark);
+
+	&:hover {
+		color: get-color(primary, darkest);
+		transform: scale(1.02); 
+	}
+
+	&:active {
+		color: get-color(primary, dark);
+		transform: scale(0.98); 
+	}
+
+	&.active {
+		font-size: get-font-size(medium-plus);
+	}
+
+	@include max-screen(949px) {
+		&#menu {
+			margin-right: get-margin('medium');
+		}
+	}
+}

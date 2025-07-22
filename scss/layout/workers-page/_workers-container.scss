@@ -1,0 +1,15 @@
+.workers-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: get-margin(medium);
+	grid-row-gap: get-margin(medium);
+
+	@include max-screen(950px) {
+		grid-template-columns: 1fr;
+	}
+
+	& .worker {
+		max-width: 100%;
+		margin: 0 !important;
+	}
+}

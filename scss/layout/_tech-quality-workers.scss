@@ -1,0 +1,12 @@
+.technologies, .quality, .workers {
+	.centrified-flex.wrap {
+		align-items: flex-start !important;
+
+		ul li {
+			margin-top: get-margin(small);
+
+			color: get-color(primary, medium-minus);
+			line-height: 24px;
+		}
+	}
+} 
